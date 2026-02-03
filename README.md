@@ -1,70 +1,126 @@
-# Getting Started with Create React App
+# 🧠 React Quiz App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern and interactive **React-based quiz application** designed to test users' React knowledge through multiple-choice questions. The app provides a clean UI, progress tracking, timer functionality, and an engaging quiz experience.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- ⚛️ Built with **React**
+- 📝 Multiple-choice quiz questions
+- ⏱️ Timer for time tracking
+- 📊 Progress bar (question count & score tracking)
+- 🎨 Clean and modern UI
+- 🔁 Restartable quiz flow
+- 📱 Responsive design
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tech Stack
 
-### `npm test`
+- **React** (Hooks & Functional Components)
+- **JavaScript (ES6+)**
+- **CSS / Styled Components** _(or plain CSS, update if needed)_
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📂 Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+src/
+├── components/      # Reusable UI components
+├── data/            # Quiz questions data
+├── index.js         # Application entry point
+└── index.css       # Global styles
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ⚙️ Installation & Usage
 
-### `npm run eject`
+1. Clone the repository
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+git clone https://github.com/your-username/react-quiz-app.git
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Navigate to the project directory
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+cd react-quiz-app
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Install dependencies
 
-## Learn More
+```bash
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. Start the development server
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm start
+```
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🧩 How It Works
 
-### Analyzing the Bundle Size
+- Users start the quiz from the welcome screen
+- Questions are fetched from a local API and stored in state
+- State management is handled with `useReducer`
+- Each question is displayed one at a time
+- Users select an answer before moving to the next question
+- Timer and progress bar update dynamically
+- Final score and high score are shown at the end of the quiz
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🧪 Testing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This project includes **unit tests** written with **Jest** and **React Testing Library**.
 
-### Advanced Configuration
+### What is tested?
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- ✅ Reducer logic (`useReducer`) is tested in isolation
+- ✅ Core state transitions such as:
+  - data loading & error handling
+  - starting and finishing the quiz
+  - answering questions and score calculation
+  - timer countdown (`tick` action)
+  - restart flow and high score logic
 
-### Deployment
+- ✅ UI components are tested independently from global state
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Testing Approach
 
-### `npm run build` fails to minify
+- Reducer tests are written as **pure function unit tests** (no DOM, no rendering)
+- Component tests focus on **user interaction and dispatch behavior**
+- Tests are colocated with their related components for maintainability
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Running Tests
+
+```bash
+npm test
+```
+
+To generate a coverage report:
+
+```bash
+npm test -- --coverage
+```
+
+---
+
+## 🎯 Purpose of the Project
+
+This project was built to:
+
+- Practice **React fundamentals**
+- Improve component-based architecture
+- Work with state management and conditional rendering
+- Build a real-world, portfolio-ready React project
+
+---
+
+⭐ If you like this project, don’t forget to give it a star!
